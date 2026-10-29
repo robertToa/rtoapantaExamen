@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="rtoapantaExamen.Views.vResumen"
+             Title="Resumen">
+    <ScrollView>
+        <VerticalStackLayout  Spacing="10" Margin="20">
+            <Label 
+            Text="RESUMEN"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Entry 
+            x:Name="txtUsuarioConectado"
+            Placeholder="Usuario Conectado"
+                IsEnabled="False"/>
+
+            <Grid RowSpacing="15" ColumnSpacing="10" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="NOMBRE"
+                 FontSize="18"
+                 Grid.Row="0"
+                 Grid.Column="0"/>
+                <Entry x:Name="txtNombre"
+                       Placeholder="Nombre"
+                    IsEnabled="False"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
+                <Label Text="APELLIDO"
+                 FontSize="18"
+                 Grid.Row="1"
+                 Grid.Column="0"/>
+                <Entry x:Name="txtApellido"
+                       Placeholder="Apellido"
+                    IsEnabled="False"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
+                <Label Text="EDAD"
+                 FontSize="18"
+                 Grid.Row="2"
+                 Grid.Column="0"/>
+                <Entry x:Name="txtEdad"
+                       Placeholder="Edad"
+                    IsEnabled="False"
+                    Grid.Row="2"
+                    Grid.Column="1"/>
+                <Label Text="FECHA DE INICIO"
+                 FontSize="18"
+                 Grid.Row="3"
+                 Grid.Column="0"/>
+                <Entry x:Name="txtFechaInicio"
+                       Placeholder="Fecha de Inicio"
+                    IsEnabled="False"
+                    Grid.Row="3"
+                    Grid.Column="1"/>
+                <Label Text="PLAN SELECCIONADO"
+                 FontSize="18"
+                 Grid.Row="4"
+                 Grid.Column="0"/>
+                <Entry x:Name="txtPlanSeleccionado"
+                       Placeholder="Plan Seleccionado"
+                    IsEnabled="False"
+                    Grid.Row="4"
+                    Grid.Column="1"/>
+                <Label Text="MONTO INICIAL"
+                 FontSize="18"
+                 Grid.Row="5"
+                 Grid.Column="0"/>
+                <Entry x:Name="txtMontoInicial"
+                       Placeholder="Monto Inicial"
+                    IsEnabled="False"
+                    Grid.Row="5"
+                    Grid.Column="1"/>
+                <Label Text="CASILLERO"
+                 FontSize="18"
+                 Grid.Row="6"
+                 Grid.Column="0"/>
+                <Entry x:Name="txtCasillero"
+                       Placeholder="Casillero"
+                    IsEnabled="False"
+                    Grid.Row="6"
+                    Grid.Column="1"/>
+                <Label Text="PAGO MENSUAL"
+                 FontSize="18"
+                 Grid.Row="7"
+                 Grid.Column="0"/>
+                <Entry x:Name="txtPagoMensual"
+                       Placeholder="Pago Mensual"
+                    IsEnabled="False"
+                    Grid.Row="7"
+                    Grid.Column="1"/>
+                <Label Text="PAGO TOTAL"
+                 FontSize="18"
+                 Grid.Row="8"
+                 Grid.Column="0"/>
+                <Entry x:Name="txtPagoTotal"
+                       Placeholder="Pago Total"
+                    IsEnabled="False"
+                    Grid.Row="8"
+                    Grid.Column="1"/>
+            </Grid>
+
+            <Button x:Name="btnNuevoRegistro"
+                    Text="Nuevo Registro"
+                    Clicked="btnNuevoRegistro_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            <Button x:Name="btnExportarTxt"
+                    Text="Exportar a TXT"
+                    Clicked="btnExportarTxt_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            <Button x:Name="btnCerrarSesion"
+                    Text="Cerrar Sesión"
+                    Clicked="btnCerrarSesion_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

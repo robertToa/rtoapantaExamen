@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="rtoapantaExamen.Views.vRegistro"
+             Title="Registro">
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Margin="20">
+            <Label 
+            Text="REGISTRO"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+            
+            <Entry 
+            x:Name="txtUsuarioConectado"
+            Placeholder="Usuario Conectado"
+                IsEnabled="False"/>
+            <Grid RowSpacing="15" ColumnSpacing="10" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="NOMBRE"
+                 FontSize="18"
+                 Grid.Row="0"
+                 Grid.Column="0"/>
+                
+                <Label Text="APELLIDO"
+                 FontSize="18"
+                 Grid.Row="0"
+                 Grid.Column="1"/>
+                
+                <Label Text="EDAD"
+                 FontSize="18"
+                 Grid.Row="0"
+                 Grid.Column="2"/>  
+
+                <Entry x:Name="txtNombre"
+                 Placeholder="Ingresar Nombre"
+                 Grid.Row="1"
+                 Grid.Column="0"/>
+
+                <Entry x:Name="txtApellido"
+                 Placeholder="Ingresar Apellido"
+                 Grid.Row="1"
+                 Grid.Column="1"/>
+                <Entry x:Name="txtEdad"
+                 Placeholder="Ingresar Edad"
+                 Keyboard="Numeric"
+                 Grid.Row="1"
+                 Grid.Column="2"/>
+            </Grid>
+
+            <Grid RowSpacing="15" ColumnSpacing="10" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label Text="FECHA DE INICIO"
+                 FontSize="18"
+                 Grid.Row="0"
+                 Grid.Column="0"/>
+
+                <DatePicker x:Name="datePickerInicio"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
+                
+                <Label Text="PLAN"
+                 FontSize="18"
+                 Grid.Row="1"
+                 Grid.Column="0"/>
+                <Picker x:Name="pickerPlan"
+                    Title="Seleccionar Plan"
+                    Grid.Row="1"
+                    Grid.Column="1">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Musculación</x:String>
+                            <x:String>Cardio</x:String>
+                            <x:String>Crossfit</x:String>
+                            <x:String>Full</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="Casillero"
+                       Grid.Row="2"
+                       Grid.Column="0"/>
+                <Switch x:Name="switchCasillero"
+                        Grid.Row="2"
+                        Grid.Column="1"/>
+
+                <Label Text="Monto Inicial"
+                       Grid.Row="3"
+Grid.Column="0"/>
+                    <Entry x:Name="txtMontoInicial" 
+                           Placeholder="Ingresar Monto Inicial"
+                           Keyboard="Numeric"
+                           Grid.Row="3"
+                           Grid.Column="1"/>
+
+                    <Button x:Name="btnCalcularPagoMensual"
+      Text="Calcular Pago Mensual"
+      Clicked="btnCalcularPagoMensual_Clicked"
+      Grid.Row="4"
+      Grid.Column="0"/>
+
+                <Entry x:Name="txtPagoMensual"
+     Placeholder="Pago Mensual"
+     IsEnabled="False"
+     Grid.Row="4"
+     Grid.Column="1"/>
+
+            </Grid>
+            
+            <Button x:Name="btnResumen"
+                    Text="Ver Resumen"
+                    Clicked="btnResumen_Clicked"
+                    />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

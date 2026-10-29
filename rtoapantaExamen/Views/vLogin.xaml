@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="rtoapantaExamen.Views.vLogin"
+             Title="Login">
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Margin="20">
+            <Label 
+            Text="LOGIN"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+            <Image
+            Source="uisrael.jpg"
+            WidthRequest="200"/>
+
+            <Grid RowSpacing="15" ColumnSpacing="10" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="USUARIO"
+                 FontSize="18"
+                 Grid.Row="0"
+                 Grid.Column="0"/>
+
+                <Entry x:Name="txtUsuario"
+                 Placeholder="Ingresar Usuario"
+                 Grid.Row="0"
+                 Grid.Column="1"/>
+
+                <Label Text="CONTRASEÑA"
+                 FontSize="18"
+                 Grid.Row="1"
+                 Grid.Column="0"/>
+
+                <Entry x:Name="txtContrasenia"
+                 Placeholder="Ingresar Contraseña"
+                 IsPassword="True"
+                 Grid.Row="1"
+                 Grid.Column="1"/>
+
+                <Button x:Name="btnIniciarSesión"
+                  Text="Iniciar Sesión"
+                  Clicked="btnIniciarSesión_Clicked"
+                  Grid.Row="2"
+                  Grid.Column="0"/>
+                
+                <Button x:Name="btnAcercaDe"
+                  Text="Acerca de"
+                  Clicked="btnAcercaDe_Clicked"
+                  Grid.Row="2"
+                  Grid.Column="1"/>
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
