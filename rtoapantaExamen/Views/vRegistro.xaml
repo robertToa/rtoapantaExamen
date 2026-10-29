@@ -3,10 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="rtoapantaExamen.Views.vRegistro"
              Title="Registro">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="estiloLab2" TargetType="Label">
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="FontSize" Value="22"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout Spacing="10" Margin="20">
             <Label 
             Text="REGISTRO"
+                Style="{StaticResource estiloLab2}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
             
@@ -54,6 +64,7 @@
                  Grid.Column="1"/>
                 <Entry x:Name="txtEdad"
                  Placeholder="Ingresar Edad"
+                       Style="{StaticResource GlobalEntry}"
                  Keyboard="Numeric"
                  Grid.Row="1"
                  Grid.Column="2"/>

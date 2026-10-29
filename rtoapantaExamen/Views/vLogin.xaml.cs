@@ -7,7 +7,7 @@ public partial class vLogin : ContentPage
 		InitializeComponent();
 	}
 
-    private string[,] usuarios = { { "rt", "12345" }, { "recepcion", "gym2026" }, { "entrenador", "fit_01" }, { "uisrael", "2026" }, { "gerente", "admin123" } };
+    private string[,] usuarios = { { "recepcion", "gym2026" }, { "entrenador", "fit_01" }, { "uisrael", "2026" }, { "gerente", "admin123" } };
 
     private void btnIniciarSesión_Clicked(object sender, EventArgs e)
     {

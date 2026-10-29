@@ -4,11 +4,19 @@
              xmlns:local="clr-namespace:rtoapantaExamen"
              x:Class="rtoapantaExamen.App">
     <Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        <Style x:Key="GlobalButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Brown"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style x:Key="GlobalEntry" TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="Brown"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style x:Key="GlobalLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
     </Application.Resources>
 </Application>

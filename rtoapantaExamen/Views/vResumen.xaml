@@ -45,6 +45,7 @@
                 <Label Text="APELLIDO"
                  FontSize="18"
                  Grid.Row="1"
+                       Style="{StaticResource GlobalLabel}"
                  Grid.Column="0"/>
                 <Entry x:Name="txtApellido"
                        Placeholder="Apellido"
